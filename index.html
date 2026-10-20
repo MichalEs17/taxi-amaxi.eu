@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi-Amaxi - Przewozy Taxi</title>
+    <style>
+        body {
+            /* Ciemne tło, aby wyeksponować "metaliczne" karty */
+            background-color: #2c2c2c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #1a1a1a;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .business-card {
+            /* Gradient imitujący szczotkowany metal / aluminium */
+            background: linear-gradient(135deg, #e0e0e0 0%, #b8b8b8 40%, #cccccc 60%, #a8a8a8 100%);
+            border-radius: 4px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5), inset 0 0 10px rgba(255,255,255,0.4);
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative;
+            border: 1px solid #888;
+        }
+
+        /* Awers wizytówki */
+        .front {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 280px;
+        }
+
+        .front h1 {
+            font-size: 3.2em;
+            margin: 0;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #111;
+        }
+
+        .front h2 {
+            font-size: 1.6em;
+            margin-top: 30px;
+            font-weight: 500;
+            color: #222;
+        }
+
+        /* Rewers wizytówki */
+        .back {
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .handwritten {
+            /* Font imitujący odręczne pismo ze zdjęcia */
+            font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+            font-size: 2.8em;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 40px;
+            color: #111;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .services {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #111;
+        }
+
+        .services li {
+            margin-bottom: 5px;
+        }
+
+        .contact {
+            text-align: right;
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #111;
+        }
+
+        .contact p {
+            margin: 5px 0;
+        }
+
+        /* Responsywność dla smartfonów */
+        @media (max-width: 550px) {
+            .details {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .contact {
+                text-align: left;
+                margin-top: 20px;
+            }
+            .front h1 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pierwsza strona wizytówki -->
+    <div class="business-card front">
+        <h1>Taxi-Amaxi</h1>
+        <h2>Przewozy taxi</h2>
+    </div>
+
+    <!-- Druga strona wizytówki -->
+    <div class="business-card back">
+        <h2 class="handwritten">zamów przejazd</h2>
+        <div class="details">
+            <ul class="services">
+                <li>Wynajem limuzyny z kierowcą</li>
+                <li>Obsługa transportowa imprez.</li>
+                <li>Przewozy w święta, sylwestra i nowy rok.</li>
+            </ul>
+            <div class="contact">
+                <!-- Zmień te dane na swoje! -->
+                <p>fachowiec@interia.eu</p>
+                <p>+48 504 524 058</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
